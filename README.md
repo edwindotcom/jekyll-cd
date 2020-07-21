@@ -1,8 +1,6 @@
 # GitHub Action to build and deploy a Jekyll site to GitHub Pages 🧪
 
-This action builds your Jekyll site to `docs/` in the same repository and pushes the changes to `master`.
-
-You can automatically serve your updated site with GitHub Pages by [choosing the `docs/` folder as your source](https://help.github.com/en/github/working-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site).
+This action builds your Jekyll site IN the `docs/` directory.
 
 This action will run `bundle install` and build your site, so please make sure your repository contains all the necessary files for doing so.
 
@@ -31,7 +29,7 @@ jobs:
         with:
           fetch-depth: 1
       - name: 🧪 Build and deploy
-        uses: victoriadrake/jekyll-cd@master
+        uses: edwindotcom/jekyll-cd@master
 ```
 
 ## Use the workflow YAML file directly
