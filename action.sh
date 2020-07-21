@@ -1,12 +1,13 @@
 #!/bin/bash
 
+cd docs
 echo '🎩 Install Jekyll'
 gem install bundler jekyll
 bundle install
 bundle exec jekyll -v || exit 1
 
 echo '🔨 Build site'
-bundle exec jekyll build -d docs
+bundle exec jekyll build
 
 echo '🧪 Deploy build'
 git config user.name "${GITHUB_ACTOR}"
